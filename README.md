@@ -66,5 +66,14 @@ Secure the database with first wizard:
 
     # mysql_secure_installation
     
+Configure the user and the database:
+
+    # mysql -u root -p
+    
+    > CREATE USER 'pegase'@'localhost' IDENTIFIED BY 'p@ssw0rd';    
+    > CREATE DATABASE pegase;
+    > GRANT ALL PRIVILEGES ON pegase.* TO 'pegase'@'localhost';
+    > FLUSH PRIVILEGES;
+    
 ## Debian / Ubuntu
 ### *todo*
