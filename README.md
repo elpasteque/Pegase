@@ -25,7 +25,7 @@ Disable SELinux in `/etc/selinux/config` and reboot.
 
 Install needed packages:
 
-    # yum install httpd rh-php71-php rh-php71-php-common rh-php71-php-pdo rh-php71-php-xml unzip rh-php71-php-opcache.x86_64 sclo-php71-php-pecl-apcu-bc.x86_64 sclo-php71-php-pecl-xdebug.x86_64 mariadb.x86_64
+    # yum install httpd rh-php71-php rh-php71-php-common rh-php71-php-pdo rh-php71-php-xml unzip rh-php71-php-opcache.x86_64 sclo-php71-php-pecl-apcu-bc.x86_64 sclo-php71-php-pecl-xdebug.x86_64 rh-php71-php-mysqlnd.x86_64 mariadb.x86_64
 
 Link new PHP config file to Apache configuration:
 
@@ -65,15 +65,6 @@ Enable and start MariaDB server:
 Secure the database with first wizard:
 
     # mysql_secure_installation
-    
-Configure the user and the database:
-
-    # mysql -u root -p
-    
-    > CREATE USER 'pegase'@'localhost' IDENTIFIED BY 'p@ssw0rd';    
-    > CREATE DATABASE pegase;
-    > GRANT ALL PRIVILEGES ON pegase.* TO 'pegase'@'localhost';
-    > FLUSH PRIVILEGES;
     
 ## Debian / Ubuntu
 ### *todo*
